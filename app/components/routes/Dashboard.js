@@ -41,7 +41,7 @@ export default class Dashboard extends Component {
 
 			<Button style={{float:'right'}} onClick={this.stop.bind(this)} color='red' content='Stop server' icon='stop' />
 
-			<br />
+			<br /><br />
 
 			<Input size='huge' fluid action labelPosition='right' value={this.state.command} onKeyPress={this.keypress.bind(this)} onChange={this.change.bind(this)} placeholder='Custom command...' >
 				<Label basic> > </Label>
