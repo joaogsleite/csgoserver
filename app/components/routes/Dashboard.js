@@ -51,42 +51,44 @@ export default class Dashboard extends Component {
 
 			<br /><br /><br />
 
-			<Button primary onClick={this.change.bind(this,'changelevel de_')} content='Change map' />
-			<Button onClick={this.change.bind(this,'changelevel de_dust2')} content='Dust2' />
-			<Button onClick={this.change.bind(this,'changelevel de_inferno')} content='Inferno' />
-			<Button onClick={this.change.bind(this,'changelevel de_mirage')} content='Mirage' />
-			<Button onClick={this.change.bind(this,'changelevel de_cache')} content='Cache' />
+			<Button size='huge' color='grey' onClick={this.change.bind(this,'exec competitive.cfg')} content='Competitive' />
+			<Button size='huge' color='grey' onClick={this.change.bind(this,'exec casual.cfg')} content='Casual' />
+			<Button size='huge' color='grey' onClick={this.change.bind(this,'exec deathmatch.cfg')} content='Deathmatch' />
+			<Button size='huge' color='grey' onClick={this.change.bind(this,'exec training.cfg')} content='Training' />
+
+			<br /><br />
+
+			<Button size='large' primary onClick={this.change.bind(this,'changelevel de_')} content='Change map' />
+			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_dust2')} content='Dust2' />
+			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_inferno')} content='Inferno' />
+			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_mirage')} content='Mirage' />
+			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_cache')} content='Cache' />
+			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_overpass')} content='Overpass' />
 
 			<Divider />
 
-			<Button onClick={this.change.bind(this,'mp_restart 1')} content='Restart match' />
-			<Button onClick={this.change.bind(this,'mp_restartround 1')} content='Restart round' />
-			<Button onClick={this.change.bind(this,'bot_kick 1')} content='Kick bots' />
-			<Button onClick={this.change.bind(this,'mp_warmup_end 1')} content='End warm up' />
-			<Button onClick={this.change.bind(this,'mp_freezetime 0')} content='Freezetime' />
+			<Button size='small' onClick={this.change.bind(this,'mp_restart 1')} content='Restart match' />
+			<Button size='small' onClick={this.change.bind(this,'mp_restartround 1')} content='Restart round' />
+			<Button size='small' onClick={this.change.bind(this,'bot_kick 1')} content='Kick bots' />
+			<Button size='small' onClick={this.change.bind(this,'mp_warmup_end 1')} content='End warm up' />
+			<Button size='small' onClick={this.change.bind(this,'mp_freezetime 0')} content='Freezetime' />
+
+			<br /><br /><br /><br /><br />
+
+
+
+			<Button size='small' color='orange' onClick={this.change.bind(this,'sv_cheats 1')} content='Server cheats' />
+			<Button size='small' onClick={this.change.bind(this,'sv_infinite_ammo 1')} content='Infinite ammo' />
+			<Button size='small' onClick={this.change.bind(this,'sv_infinite_ammo 2')} content='Infinite nades/clips' />
+			<Button size='small' onClick={this.change.bind(this,'mp_maxmoney 65535; mp_startmoney 65535;')} content='Infinite money' />
+			<Button size='small' onClick={this.change.bind(this,'mp_buy_anywhere 1 ; mp_buytime 9999')} content='Buy anywhere/anytime' />
 
 			<Divider />
 
-			<Button color='orange' onClick={this.change.bind(this,'sv_cheats 1')} content='Server cheats' />
-			<Button onClick={this.change.bind(this,'sv_infinite_ammo 1')} content='Infinite ammo' />
-			<Button onClick={this.change.bind(this,'sv_infinite_ammo 2')} content='Infinite nades/clips' />
-			<Button onClick={this.change.bind(this,'give weapon_smokegrenade ; give weapon_hegrenade ; give weapon_molotov ; give weapon_flashbang')} content='Give nades' />
-			<Button onClick={this.change.bind(this,'mp_buy_anywhere 1')} content='Buy anywhere' />
-			<Button onClick={this.change.bind(this,'mp_buytime 9999')} content='Buy anytime' />
-
-			<Divider />
-
-			<Button onClick={this.change.bind(this,'sv_grenade_trajectory 1')} content='Grenade trajectory' />
-			<Button onClick={this.change.bind(this,'sv_grenade_trajectory_time 10')} content='Grenade trajectory time' />
-			<Button onClick={this.change.bind(this,'sv_showimpacts 1')} content='Show impacts' />
-
-			<Divider />
-
-			<Button onClick={this.change.bind(this,'sv_showimpacts 1')} content='Show impacts' />
-			<Button onClick={this.change.bind(this,'sv_showimpacts 1')} content='Show impacts' />
-			<Button onClick={this.change.bind(this,'sv_showimpacts 1')} content='Show impacts' />
-			<Button onClick={this.change.bind(this,'sv_showimpacts 1')} content='Show impacts' />
-
+			<Button size='small' onClick={this.change.bind(this,'mp_friendlyfire 0')} content='Friendly fire' />
+			<Button size='small' onClick={this.change.bind(this,'sv_grenade_trajectory 1')} content='Grenade trajectory' />
+			<Button size='small' onClick={this.change.bind(this,'sv_grenade_trajectory_time 10')} content='Grenade trajectory time' />
+			<Button size='small' onClick={this.change.bind(this,'sv_showimpacts 1')} content='Show impacts' />
 
 		</div>
 	}
