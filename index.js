@@ -22,6 +22,7 @@ server.get('/api/start',(req,res)=>{
 })
 server.get('/api/stop',(req,res)=>{
 	csgo.stdin.end()
+	csgo.kill()
 	csgo = false
 	res.send('OK!')
 })
