@@ -41,7 +41,7 @@ export default class Dashboard extends Component {
 
 			<Button style={{float:'right'}} onClick={this.stop.bind(this)} color='red' content='Stop server' icon='stop' />
 
-			<br /><br />
+			<br />
 
 			<Input size='huge' fluid action labelPosition='right' value={this.state.command} onKeyPress={this.keypress.bind(this)} onChange={this.change.bind(this)} placeholder='Custom command...' >
 				<Label basic> > </Label>
@@ -50,6 +50,8 @@ export default class Dashboard extends Component {
 			</Input>
 
 			<br /><br /><br />
+
+			<div className='cmd_buttons'>
 
 			<Button size='huge' color='grey' onClick={this.change.bind(this,'exec competitive.cfg')} content='Competitive' />
 			<Button size='huge' color='grey' onClick={this.change.bind(this,'exec casual.cfg')} content='Casual' />
@@ -90,6 +92,7 @@ export default class Dashboard extends Component {
 			<Button size='small' onClick={this.change.bind(this,'sv_grenade_trajectory_time 10')} content='Grenade trajectory time' />
 			<Button size='small' onClick={this.change.bind(this,'sv_showimpacts 1')} content='Show impacts' />
 
+			</div>
 		</div>
 	}
 }
