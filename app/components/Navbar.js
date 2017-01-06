@@ -13,10 +13,12 @@ export default class Navbar extends Component {
 		}
 		this.menu = [
 			{ label: 'Dashboard',	path: '/' },
+			{ label: 'Workshop',	path: 'https://steamcommunity.com/workshop/browse/?appid=730' },
 		]
 	}
 	go(path){
-		browserHistory.push(path)
+		if(path.includes('http')) window.open(path, '_blank')
+		else browserHistory.push(path)
 		if(this.state.mobile) this.setState({hidden:true})
 	}
 	toggleMenu(){

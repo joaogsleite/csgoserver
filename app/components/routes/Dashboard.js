@@ -61,6 +61,7 @@ export default class Dashboard extends Component {
 			<br /><br />
 
 			<Button size='large' primary onClick={this.change.bind(this,'changelevel de_')} content='Change map' />
+			<Button size='large' primary onClick={this.change.bind(this,'host_workshop_map 123')} content='Workshop map' />
 			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_dust2')} content='Dust2' />
 			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_inferno')} content='Inferno' />
 			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_mirage')} content='Mirage' />
