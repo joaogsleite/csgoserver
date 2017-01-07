@@ -61,12 +61,20 @@ export default class Dashboard extends Component {
 			<br /><br />
 
 			<Button size='large' primary onClick={this.change.bind(this,'changelevel de_')} content='Change map' />
-			<Button size='large' primary onClick={this.change.bind(this,'host_workshop_map 123')} content='Workshop map' />
 			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_dust2')} content='Dust2' />
 			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_inferno')} content='Inferno' />
 			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_mirage')} content='Mirage' />
 			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_cache')} content='Cache' />
 			<Button size='large' basic color='blue' onClick={this.change.bind(this,'changelevel de_overpass')} content='Overpass' />
+
+			<br /><br />
+
+			<Button size='large' primary onClick={this.change.bind(this,'host_workshop_map ')} content='Workshop map' />
+			<Button size='large' basic color='blue' onClick={this.change.bind(this,'host_workshop_map 530892052')} content='aim_map_csgo' />
+			<Button size='large' basic color='blue' onClick={this.change.bind(this,'host_workshop_map 243702660')} content='aim_botz' />
+			<Button size='large' basic color='blue' onClick={this.change.bind(this,'host_workshop_map 122443683')} content='aim_map' />
+			<Button size='large' basic color='blue' onClick={this.change.bind(this,'host_workshop_map 574004646')} content='aim_dimension' />
+
 
 			<Divider />
 
@@ -81,6 +89,7 @@ export default class Dashboard extends Component {
 
 
 			<Button size='small' color='orange' onClick={this.change.bind(this,'sv_cheats 1')} content='Server cheats' />
+			<Button size='small' onClick={this.change.bind(this,'mp_free_armor 1')} content='Free armor' />
 			<Button size='small' onClick={this.change.bind(this,'sv_infinite_ammo 1')} content='Infinite ammo' />
 			<Button size='small' onClick={this.change.bind(this,'sv_infinite_ammo 2')} content='Infinite nades/clips' />
 			<Button size='small' onClick={this.change.bind(this,'mp_maxmoney 65535; mp_startmoney 65535;')} content='Infinite money' />
