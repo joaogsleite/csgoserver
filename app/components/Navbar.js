@@ -53,6 +53,8 @@ export default class Navbar extends Component {
 				return <Menu.Item key={i.path} content={i.label} onClick={this.go.bind(this,i.path)} />
 			})
 			items.push(<Menu.Item key='logout' content='Logout' onClick={this.go.bind(this,'/logout')} />)
+			items.push(<Menu.Item position='right' icon='user' key='profile' onClick={this.go.bind(this,'http://steamcommunity.com/profiles/'+this.props.user.id)} content={this.props.user.displayName} />)
+
 		}
 		else items.push(<Menu.Item key='login' content='Login' onClick={this.go.bind(this,'/auth/steam')} />)
 
@@ -67,9 +69,6 @@ export default class Navbar extends Component {
 				{logo}
 			</Menu.Item>
 			{this.state.hidden?'':items}
-			<Menu.Menu position='right'>
-				<Menu.Item icon='user' key='profile' onClick={this.go.bind(this,'http://steamcommunity.com/profiles/'+this.props.user.id)} content={this.props.user.displayName} />
-			</Menu.Menu>
 		</Menu>
 
 	}
