@@ -31,9 +31,9 @@ module.exports = function(server){
 
 	server.all('*', (req,res,next)=>{
 		// redirect authenticated users to previous path if exists
-		if(req.path=='/' && req.isAuthenticated() && req.session.returnTo)
+		/*if(req.path=='/' && req.isAuthenticated() && req.session.returnTo)
 			if(!req.session.returnTo.includes('favicon'))
-				return res.redirect(req.session.returnTo)
+				return res.redirect(req.session.returnTo)*/
 
 		// redirect authenticated users to dashboard
 		if(req.path=='/' && req.isAuthenticated())
@@ -45,7 +45,7 @@ module.exports = function(server){
 
 		// redirect non-authenticated users to login
 		if(req.isAuthenticated()) return next()
-		req.session.returnTo = req.path;
+		//req.session.returnTo = req.path;
 		return res.redirect('/auth/steam')
 	})
 }
