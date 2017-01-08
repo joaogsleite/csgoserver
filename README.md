@@ -56,7 +56,12 @@ start on filesystem and started networking
 respawn
 chdir /home/steam/csgoserver/
 env NODE_ENV=production
+<<<<<<< HEAD
 exec node server/index.js >> running.log
+=======
+exec node index.js >> running.log
+
+>>>>>>> 430434db5050e1f5e2cca5f8ec23093365442649
 ```
 
 * Start/Stop service
