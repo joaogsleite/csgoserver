@@ -1,7 +1,6 @@
 
 const bodyParser = require('body-parser')
 const {spawn} = require('child_process')
-const document = require('../controllers/document')
 
 let csgo = false
 

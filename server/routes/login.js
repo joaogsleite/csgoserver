@@ -1,11 +1,11 @@
 const passport = require('passport')
-const OAuth2Strategy = require('passport-oauth').OAuth2Strategy
+const SteamStrategy = require('passport-steam').Strategy
 const session = require('express-session')
 
 const users = require('../controllers/user')
 
 passport.use(new SteamStrategy(
-	require('../config/steam.json'), (id, profile, done) {
+	require('../config/steam.json'), (id, profile, done)=>{
 		users.createOrGet(profile, done)
   	}
 ))
