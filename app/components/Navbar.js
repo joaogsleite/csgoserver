@@ -18,6 +18,7 @@ export default class Navbar extends Component {
 	}
 	go(path){
 		if(path.includes('http')) window.open(path, '_blank')
+		else if(path.includes('/log')) window.location.href = path
 		else browserHistory.push(path)
 		if(this.state.mobile) this.setState({hidden:true})
 	}
@@ -40,9 +41,14 @@ export default class Navbar extends Component {
 
 		let logo = <span style={{fontWeight:'bold'}}>CSGO</span>
 
-		let items = this.menu.map((i)=>{
-			return <Menu.Item key={i.path} content={i.label} onClick={this.go.bind(this,i.path)} />
-		})
+		let items = []
+		if(this.props.login){
+			items = this.menu.map((i)=>{
+				return <Menu.Item key={i.path} content={i.label} onClick={this.go.bind(this,i.path)} />
+			})
+			items.push(<Menu.Item key='logout' content='Logout' onClick={this.go.bind(this,'/logout')} />)
+		}
+		else items.push(<Menu.Item key='login' content='Login' onClick={this.go.bind(this,'/auth/fenix')} />)
 
 		return <Menu fixed='top' size='massive' stackable>
 			<Menu.Item

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { IndexRoute, Router, Route, Link, browserHistory } from 'react-router'
 
 import App from '../components/App'
+import Intro from '../components/routes/Intro'
 import Dashboard from '../components/routes/Dashboard'
 import NoMatch from '../components/routes/NoMatch'
 
@@ -13,7 +14,8 @@ ReactDOM.render(
 	<Provider store={store}>
 		<Router history={browserHistory}>
     		<Route path="/" component={App}>
-				<IndexRoute component={Dashboard} />
+				<IndexRoute component={Intro} />
+				<Route path="dashboard" component={Dashboard} />
 				<Route path="*" component={NoMatch} />
     		</Route>
   		</Router>

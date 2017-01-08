@@ -1,0 +1,5 @@
+{
+	"apiKey" 	: "F38BF2FDE5230266744967D0585BD66D",
+	"realm" 	: "http://cs.n1z.pt/",
+	"returnURL" : "http://cs.n1z.pt/auth/steam/callback"
+}
