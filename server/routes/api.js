@@ -22,7 +22,7 @@ module.exports = function(server){
 	})
 	server.get('/api/start',(req,res)=>{
 		if(csgo) return res.send('ERROR!')
-		csgo = spawn('sh',['startcsgo.sh'])
+		csgo = spawn('sh',['/home/steam/csgoserver/startcsgo.sh'])
 		csgo.stdin.setEncoding('utf-8')
 		csgo.stdout.pipe(process.stdout)
 		res.send('OK!')
