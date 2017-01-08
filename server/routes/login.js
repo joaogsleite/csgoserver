@@ -43,6 +43,8 @@ module.exports = function(server){
 		if(req.path=='/' || req.path.substring(0,7)=='/files/')
 			return next()
 
+		if(req.user) if(!['76561198091608905','76561197982582377','76561198018510421','76561198184308615'].contains(req.user.id)) res.redirect('/logout')
+
 		// redirect non-authenticated users to login
 		if(req.isAuthenticated()) return next()
 		//req.session.returnTo = req.path;

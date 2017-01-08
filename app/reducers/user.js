@@ -11,7 +11,8 @@ export default function reducer(state={
 
     if(action.type === "FETCHING_USER")
         return {...state, fetching: true}
-    if(action.type === "FETCH_USER_FULFILLED")
+    if(action.type === "FETCH_USER_FULFILLED"){
+		console.log(action.payload)
         return {
             ...state,
             user : action.payload,
@@ -19,6 +20,7 @@ export default function reducer(state={
             fetched: true,
             error: null
         }
+	}
     if(action.type === "FETCH_USER_REJECTED")
         return {...state, fetching: false, error: action.payload}
 

@@ -68,7 +68,7 @@ export default class Navbar extends Component {
 			</Menu.Item>
 			{this.state.hidden?'':items}
 			<Menu.Menu position='right'>
-				<Menu.Item icon='user' key='profile' content={this.props.user.displayName} />
+				<Menu.Item icon='user' key='profile' onClick={this.go.bind(this,'http://steamcommunity.com/profiles/'+this.props.user.id)} content={this.props.user.displayName} />
 			</Menu.Menu>
 		</Menu>
 
